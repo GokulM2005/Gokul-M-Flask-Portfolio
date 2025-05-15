@@ -6,7 +6,7 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-mport os
+import os
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 10000))
