@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gokul M Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #18181b;
+            color: #fff;
+        }
+
+        .section {
+            opacity: 1;
+            transform: none;
+        }
+
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #38bdf8;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="fixed w-full bg-gray-900/90 backdrop-blur-sm z-50 py-4 px-6">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-extrabold tracking-tight">
+                Gokul <span class="text-[#38bdf8]">M</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About me</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#activities" class="nav-link">Activities</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-38">
+
+        <!-- Home Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center section mb-0">
+            <div class="max-w-4xl mx-auto text-center px-4">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    Hello! I'm <span class="text-[#38bdf8]">Gokul M</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8">
+                    Electronics & Communication Enginnering Student | VLSI Design and Testing | Python | C++ | Verilog
+                </p>
+                <a href="#contact" class="inline-block px-8 py-3 bg-[#38bdf8] text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-cyan-400 transition duration-300">
+                    Connect with Me
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="pt-8 pb-20 section">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-8 text-[#38bdf8]">About Me</h2>
+                <h3 class="text-xl font-bold mb-2">Passionate Electronics and Communication Engineering Student | Innovator & Problem Solver | Sustainable Tech Enthusiast</h3>
+                <p class="text-lg leading-relaxed mb-6">
+                    As a motivated <b>Electronics and Communication Engineering (ECE)</b> student, I thrive on transforming theoretical knowledge into real-world solutions. My academic journey has equipped me with strong analytical and technical skills, but I believe true engineering excellence comes from hands-on experience, collaboration, and continuous learning.
+                </p>
+                <div class="mb-4">
+                    <h4 class="text-lg font-semibold text-[#38bdf8] mb-2">What Drives Me?</h4>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>A deep curiosity for emerging technologies (IoT, Embedded Systems, 5G, AI/ML in ECE).</li>
+                        <li>A passion for problem-solving-whether debugging circuits, optimizing code, or designing efficient systems.</li>
+                    </ul>
+                </div>
+                <div class="mb-4">
+                    <h4 class="text-lg font-semibold text-[#38bdf8] mb-2">What I Bring to the Table?</h4>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Strong foundation in Analog and Digital Electronics, Signal processing, and VLSI Design.</li>
+                        <li>Hands-on experience with microcontrollers (Arduino, Raspberry Pi), PCB design, and FPGA boards.</li>
+                        <li>Proficient in Verilog/VHDL (FPGA/RTL design), Python and C/C++.</li>
+                        <li>Team collaboration - I enjoy working in dynamic environments where ideas are shared and refined.</li>
+                    </ul>
+                </div>
+                <p class="mt-6 font-semibold">Let's build the future - one circuit, one line of code, and one sustainable solution at a time!</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-gray-800/50 section">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-8 text-[#38bdf8]">Areas of Interest</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                    <div class="p-4 bg-gray-700/50 rounded-lg hover:bg-gray-700 transition">
+                        <h3 class="font-semibold mb-2">VLSI Design & Testing</h3>
+                    </div>
+                    <div class="p-4 bg-gray-700/50 rounded-lg hover:bg-gray-700 transition">
+                        <h3 class="font-semibold mb-2">Embedded Systems</h3>
+                    </div>
+                    <div class="p-4 bg-gray-700/50 rounded-lg hover:bg-gray-700 transition">
+                        <h3 class="font-semibold mb-2">Digital IC Design</h3>
+                    </div>
+                    <div class="p-4 bg-gray-700/50 rounded-lg hover:bg-gray-700 transition">
+                        <h3 class="font-semibold mb-2">Analog Electronics</h3>
+                    </div>
+                    <div class="p-4 bg-gray-700/50 rounded-lg hover:bg-gray-700 transition">
+                        <h3 class="font-semibold mb-2">Control Systems</h3>
+                    </div>
+                    <div class="p-4 bg-gray-700/50 rounded-lg hover:bg-gray-700 transition">
+                        <h3 class="font-semibold mb-2">Machine Learning</h3>
+                    </div>
+                    <div class="p-4 bg-gray-700/50 rounded-lg hover:bg-gray-700 transition">
+                        <h3 class="font-semibold mb-2">Cloud Computing</h3>
+                    </div>
+                    <div class="p-4 bg-gray-700/50 rounded-lg hover:bg-gray-700 transition">
+                        <h3 class="font-semibold mb-2">Data Structures & Algorithms</h3>
+                    </div>
+                    <div class="p-4 bg-gray-700/50 rounded-lg hover:bg-gray-700 transition">
+                        <h3 class="font-semibold mb-2">Image Processing</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20 section">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-8 text-[#38bdf8]">Education</h2>
+                <div class="space-y-8">
+                    <div class="p-6 bg-gray-800/50 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2">Bachelor of Technology - ECE</h3>
+                        <p class="text-gray-400">Amrita Vishwa Vidhyapeetham, Coimbatore</p>
+                        <p class="text-gray-400">2022 - 2026</p>
+                        <p class="mt-2">Current CGPA: 7.66</p>
+                    </div>
+                    <div class="p-6 bg-gray-800/50 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2">HSC and SSLC</h3>
+                        <p class="text-gray-400">Blossom Public School, Thanjavur</p>
+                        <p class="text-gray-400">2022, 2020</p>
+                        <p class="mt-2">77% and 96% respectively</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-gray-800/50 section">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-8 text-[#38bdf8]">Project Works</h2>
+                <div class="space-y-8">
+                    <div class="p-6 bg-gray-700/50 rounded-lg hover:bg-gray-700 transition">
+                        <h3 class="text-xl font-bold mb-2">Musical Note and Pitch Identification Tool</h3>
+                        <p class="text-gray-400 mb-4">Signal Processing, Audio Analysis</p>
+                        <p>Developed a user-friendly interface enabling real-time audio interaction, spectrum visualization, and audio segment recording or analysis. Implemented signal processing algorithms to accurately detect and map prominent frequencies to their corresponding musical notes and visually display the results.</p>
+                    </div>
+                    <div class="p-6 bg-gray-700/50 rounded-lg hover:bg-gray-700 transition">
+                        <h3 class="text-xl font-bold mb-2">Electronics Mastery Certification Projects - LMES (Chitti)</h3>
+                        <p class="text-gray-400 mb-4">Embedded Systems, Electronics</p>
+                        <p>Completed multiple hands-on projects as part of the program which contained three major courses: Incredible Electronics, Advanced Electronics, Embedded Systems.</p>
+                    </div>
+                    <div class="p-6 bg-gray-700/50 rounded-lg hover:bg-gray-700 transition">
+                        <h3 class="text-xl font-bold mb-2">e-Yantra 24-25 Builder Bot - IIT Bombay</h3>
+                        <p class="text-gray-400 mb-4">Robotics, Simulation</p>
+                        <p>Successfully simulated a builder bot in CoppeliaSim, gaining hands-on experience in designing bot movements, control systems, and task execution logic. Currently progressing through Stage 2, which involves building and fine-tuning the physical bot using a hardware kit for real-world implementation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-20 section">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-8 text-[#38bdf8]">Certifications</h2>
+                <div class="grid gap-4">
+                    <div class="p-4 bg-gray-800/50 rounded-lg hover:bg-gray-800 transition">
+                        <div class="flex justify-between items-center">
+                            <span>Cloud Computing (NPTEL)</span>
+                            <span class="text-gray-400">Jul 2024 - Oct 2024</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-gray-800/50 rounded-lg hover:bg-gray-800 transition">
+                        <div class="flex justify-between items-center">
+                            <span>Python Fundamentals (Great Learning)</span>
+                            <span class="text-gray-400">Feb 2024 - Mar 2024</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-gray-800/50 rounded-lg hover:bg-gray-800 transition">
+                        <div class="flex justify-between items-center">
+                            <span>Object Oriented Programming with C++ (CIR, Amrita)</span>
+                            <span class="text-gray-400">Jan 2024 - Mar 2024</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-gray-800/50 rounded-lg hover:bg-gray-800 transition">
+                        <div class="flex justify-between items-center">
+                            <span>Digital Design with Verilog (NPTEL)</span>
+                            <span class="text-gray-400">Dec 2024 - Apr 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activities Section -->
+        <section id="activities" class="py-20 bg-gray-800/50 section">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-8 text-[#38bdf8]">Extracurricular Activities</h2>
+                <div class="space-y-4">
+                    <div class="p-4 bg-gray-700/50 rounded-lg">
+                        <h3 class="font-semibold mb-2">Team Media Club Member</h3>
+                        <p>Played a key role in enhancing my college's lively environment as part of the photography club. Documented moments that highlight our campus's dynamic spirit.</p>
+                    </div>
+                    <div class="p-4 bg-gray-700/50 rounded-lg">
+                        <h3 class="font-semibold mb-2">College Football Team Player</h3>
+                        <p>Demonstrated teamwork and leadership on the football field as a college team player.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 section">
+            <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-start md:items-center">
+                <div class="w-full md:w-2/3">
+                    <h2 class="text-3xl font-bold mb-8 text-[#38bdf8]">Contact Me</h2>
+                    <div class="grid gap-4">
+                        <div class="p-4 bg-gray-800/50 rounded-lg flex items-center space-x-3">
+                            <span class="text-[#38bdf8] text-xl"></span>
+                            <span class="font-bold">Email:</span>
+                            <a href="mailto:gokulmuruganandham@gmail.com" class="hover:underline text-white">gokulmuruganandham@gmail.com</a>
+                        </div>
+                        <div class="p-4 bg-gray-800/50 rounded-lg flex items-center space-x-3">
+                            <span class="text-[#38bdf8] text-xl"></span>
+                            <span class="font-bold">Phone:</span>
+                            <a href="tel:+916385367385" class="hover:underline text-white">+91 6385367385</a>
+                        </div>
+                        <div class="p-4 bg-gray-800/50 rounded-lg flex items-center space-x-3">
+                            <span class="text-[#38bdf8] text-xl"></span>
+                            <span class="font-bold">LinkedIn:</span>
+                            <a href="https://linkedin.com/in/gokul-muruganandham" target="_blank" rel="noopener noreferrer" class="hover:underline text-white">gokul-muruganandham</a>
+                        </div>
+                        <div class="p-4 bg-gray-800/50 rounded-lg flex items-center space-x-3">
+                            <span class="text-[#38bdf8] text-xl"></span>
+                            <span class="font-bold">Location:</span>
+                            <span class="text-white">Thanjavur, India</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 flex justify-center mt-10 md:mt-0">
+                    <div class="w-48 h-48 bg-gray-700/50 rounded-lg flex items-center justify-center overflow-hidden">
+                        <img src="{{ url_for('static', filename='1000017795.jpg') }}" alt="Gokul M Photo" class="object-cover w-full h-full rounded-lg shadow-lg" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-gray-500 border-t border-gray-800">
+        <p>© <span id="year"></span> Gokul M. All rights reserved.</p>
+    </footer>
+
+    <!-- Animation Script -->
+    <script>
+        // Update year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Initialize GSAP ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animate sections on scroll
+        document.querySelectorAll('.section').forEach(section => {
+            gsap.from(section, {
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                },
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                ease: "power2.out"
+            });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
